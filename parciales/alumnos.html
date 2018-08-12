@@ -1,0 +1,24 @@
+<h1>Alumnos</h1>
+
+<div class="row">
+	<table class="table table-striped">
+		<tr>
+			<th>Código</th>
+			<th>Nombre</th>
+			<th>Teléfono</th>
+			<th></th>
+		</tr>
+		<tr ng-repeat="alumno in alumnos | limitTo:posicion | limitTo:-5">
+			<td>{{ alumno.nombre }}</td>
+			<td>{{ alumno.nombre }}</td>
+			<td>{{ alumno.telefono | telefono }}</td>
+			<td><a href="#/alumno/{{ alumno.codigo }}">Ver registro</a></td>
+		</tr>
+		
+	</table>
+	<button ng-click="anteriores()" class="btn btn-primary">Anteriores</button>
+	<button ng-click="siguientes()" class="btn btn-primary">Siguientes</button>
+</div>
+
+
+{{ alumnos | json }} 
